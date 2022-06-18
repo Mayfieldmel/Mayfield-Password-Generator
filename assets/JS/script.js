@@ -15,11 +15,24 @@ function generatePassword() {
 
   if (character.length >= 8  && character.length <= 128) {
     console.log(character.length);
+  
+
+    var confirmUpperCase = window.confirm("Would you like to use uppercase letters in your password?")
+    if (confirmUpperCase) {
+      var confirmLowerCase = window.confirm("Would you like to use lowercase letters in your password?")
+      if (confirmLowerCase) {
+        console.log("uppercase & lowercase")
+      } else {
+        console.log("only uppercase")
+      }
+    } else {
+      console.log("only lowercase")
+    }
 
   } else {
-  window.alert ("Your password must be between 8 and 128 characters long. Please pick another number.");
-  generatePassword();
-  }
+    window.alert ("Your password must be between 8 and 128 characters long. Please pick another number.");
+    generatePassword();
+    }
 
   
 }
