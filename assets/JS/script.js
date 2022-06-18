@@ -2,29 +2,33 @@
 
 // generate password = randomized characters for selected length
 // randomized characters
-// var character = {
-//   letters: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz,
-//   numbers: 0123456789,
-//   length: window.prompt("How long is your password?")
-// }
+var character = {
+  letters: ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],
+  numbers: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  length: window.prompt("How long is your password? Please pick a number between 8 and 128")
+}
+
+console.log(character);
 
 function generatePassword() {
-  var passwordLength = window.prompt ("How long is your password? Please pick a number between 8 and 128");
+  character.length;
 
-  if (passwordLength >= 8  && passwordLength <= 128) {
+  if (character.length >= 8  && character.length <= 128) {
+    console.log(character.length);
 
   } else {
   window.alert ("Your password must be between 8 and 128 characters long. Please pick another number.");
   generatePassword();
   }
 
-  console.log(passwordLength);
+  
 }
 
   
 
 
 
+// character.letters = Math.floor(Math.random())
 
 
 // Get references to the #generate element
