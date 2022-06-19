@@ -36,12 +36,12 @@ var confirmAllLength = 56;
             
 
 
-var passwordLength = function() {
-  window.prompt("How long is your password? Please pick a number between 8 and 128")
-}
+
+var passwordLength = window.prompt("How long is your password? Please pick a number between 8 and 128")
+
 
 // Ask for passwordLength
-passwordLength()
+console.log(character);
   // if passwordLength is between 8 and 128
   if (passwordLength >= 8  && passwordLength <= 128) {
     console.log(passwordLength)
@@ -65,8 +65,8 @@ passwordLength()
           var confirmSpecials = window.confirm("Would you like your password to contain special characters?")
           // if user confirms special characters
           if (confirmSpecials) {
-            console.log("special characters");
-                
+            console.log("special characters")
+          
           // if users refuses special characters
           } else {
             console.log("no special characters")
@@ -155,10 +155,8 @@ passwordLength()
   // if passwordLength is not between 8 and 128
   } else {
     window.alert ("Your password must be between 8 and 128 characters long. Please pick another number.");
-    passwordLength();
     }
   
-
 
 
 
