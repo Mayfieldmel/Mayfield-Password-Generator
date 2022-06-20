@@ -247,11 +247,14 @@ function generatePassword() {
     }
 
   // if passwordLength is not between 8 and 128
-  } else {
-    // while loop
+  } else if (parseInt(passwordLength) < 8 || parseInt(passwordLength) > 128) {
+    
     window.alert ("Your password must be between 8 and 128 characters long. Please pick another number.");
     return generatePassword();
-  }
+ 
+  } else {
+
+ }
 
     return finalPassword;
 }
