@@ -40,20 +40,8 @@ var option = {
 var finalPassword = "";
 
 function generatePassword() {
-  
-
-
-
-
-
-
-
- var passwordLength = window.prompt("How long is your password? Please pick a number between 8 and 128");
-
-
 // Ask for passwordLength
-// passwordLength();
-// var passwordLength = window.prompt("How long is your password? Please pick a number between 8 and 128");
+ var passwordLength = window.prompt("How long is your password? Please pick a number between 8 and 128");
   // if passwordLength is between 8 and 128
   if (parseInt(passwordLength) >= 8 && parseInt(passwordLength) <= 128) {
     console.log(passwordLength)
@@ -261,12 +249,10 @@ function generatePassword() {
   // if passwordLength is not between 8 and 128
   } else {
     // while loop
-    
     window.alert ("Your password must be between 8 and 128 characters long. Please pick another number.");
-    var passwordLength = window.prompt("How long is your password? Please pick a number between 8 and 128");
-    }
+    return generatePassword();
+  }
 
-  
     return finalPassword;
 }
 
