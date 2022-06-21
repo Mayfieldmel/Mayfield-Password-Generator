@@ -403,6 +403,9 @@ function generatePassword() {
             } else {
 
             }
+          } else {
+            window.alert("Error! Must select at least one value type. Try again.")
+            generatePassword ();
           }
         }
       }
