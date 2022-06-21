@@ -2,7 +2,7 @@
 
 This repo houses the assets used to build the Mayfield Password Generator, available at https://mayfieldmel.github.io/Mayfield-Password-Generator/ .
 
-![Password-Generator] (./assets/images/password-generator.png)
+![password-generator](./assets/images/password-generator.png)
 
 ## The Generator
 
