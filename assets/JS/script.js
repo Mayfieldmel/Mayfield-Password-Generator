@@ -40,18 +40,18 @@ var option = {
 }
 
 
-var finalPassword = "";
+
 
 function generatePassword() {
+  var finalPassword = "";
 // Ask for passwordLength
  var passwordLength = window.prompt("How long is your password? Please pick a number between 8 and 128");
+ 
   // if passwordLength is between 8 and 128
   if (parseInt(passwordLength) >= 8 && parseInt(passwordLength) <= 128) {
     console.log(passwordLength)
-   
     // Ask for uppercase letters
     var confirmUpperCase = window.confirm("Would you like to use uppercase letters in your password?")
-
     // if user confirms uppercase letters
     if (confirmUpperCase) {
       // Ask for lowercase letters
@@ -311,7 +311,7 @@ function generatePassword() {
   } else {
 
  }
-
+    
     return finalPassword;
 }
 
@@ -327,9 +327,8 @@ function writePassword() {
   var password = generatePassword();
   console.log(password);
   var passwordText = document.querySelector("#password");
-
+  passwordText.value = "";
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
