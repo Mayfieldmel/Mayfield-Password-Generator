@@ -21,6 +21,7 @@ var special = {
   length: 20
 }
 
+// criteria options 
 var option = {
   one: [...uppercase.characters, ...lowercase.characters, ...number.characters, ...special.characters],
   two: [...uppercase.characters, ...lowercase.characters, ...number.characters],
@@ -72,11 +73,12 @@ function generatePassword() {
             // validate criteria choices
             var validateCriteria = window.confirm("You selected uppercase letters, lowercase letters, numbers and special characters. Press ok to confirm and receive your password, or cancel to exit and try again.")
             if (validateCriteria) {
+              // randomize password
               for (var i = 0; i < passwordLength; i++) {
                 var randomPassword = function() {
                     var value = Math.floor(Math.random() * option.one.length);
-                  option.one[value]
-                  finalPassword += option.one[value];
+                    option.one[value]
+                    finalPassword += option.one[value];
                 } 
               randomPassword();
               }
@@ -86,13 +88,15 @@ function generatePassword() {
           // if users refuses special characters
           } else {
             console.log("no special characters")
+            // validate criteria choices
             var validateCriteria = window.confirm("You selected uppercase letters, lowercase letters, and numbers. Press ok to confirm and receive your password, or cancel to exit and try again.")
             if (validateCriteria) {
+              // randomize password
               for (var i = 0; i < passwordLength; i++) {
               var randomPassword = function() {
                   var value = Math.floor(Math.random() * option.two.length);
-                option.two[value]
-                finalPassword += option.two[value];
+                  option.two[value]
+                  finalPassword += option.two[value];
               } 
             randomPassword();
               }
@@ -108,13 +112,15 @@ function generatePassword() {
           // if user confirms special characters
           if (confirmSpecials) {
             console.log("special characters")
+            // validate criteria choices
             var validateCriteria = window.confirm("You selected uppercase letters, lowercase letters and special characters. Press ok to confirm and receive your password, or cancel to exit and try again.")
             if (validateCriteria) {
+              // randomize password
               for (var i = 0; i < passwordLength; i++) {
                 var randomPassword = function() {
                     var value = Math.floor(Math.random() * option.three.length);
-                  option.three[value]
-                  finalPassword += option.three[value];
+                    option.three[value]
+                    finalPassword += option.three[value];
                 } 
               randomPassword();
               }
@@ -124,8 +130,10 @@ function generatePassword() {
           // if users refuses special characters
           } else {
             console.log("no special characters")
+            // validate criteria choices
             var validateCriteria = window.confirm("You selected uppercase letters and lowercase letters. Press ok to confirm and receive your password, or cancel to exit and try again.")
             if (validateCriteria) {
+              // randomize password
               for (var i = 0; i < passwordLength; i++) {
                 var randomPassword = function() {
                     var value = Math.floor(Math.random() * option.four.length);
@@ -153,8 +161,10 @@ function generatePassword() {
           // if confirm special characters
           if (confirmSpecials) {
             console.log("special characters")
+            // validate criteria choices
             var validateCriteria = window.confirm("You selected uppercase letters, numbers and special characters. Press ok to confirm and receive your password, or cancel to exit and try again.")
             if (validateCriteria) {
+              // randomize passwords
               for (var i = 0; i < passwordLength; i++) {
                 var randomPassword = function() {
                     var value = Math.floor(Math.random() * option.five.length);
@@ -169,8 +179,10 @@ function generatePassword() {
           // if refuses special characters
           } else {
             console.log("no special characters")
+            // validate criteria choices
             var validateCriteria = window.confirm("You selected uppercase letters, and numbers. Press ok to confirm and receive your password, or cancel to exit and try again.")
             if (validateCriteria) {
+              // randomize password
               for (var i = 0; i < passwordLength; i++) {
                 var randomPassword = function() {
                     var value = Math.floor(Math.random() * option.six.length);
@@ -192,8 +204,10 @@ function generatePassword() {
           // if confirm special characters
           if (confirmSpecials) {
             console.log("special characters")
+            // validate criteria choices
             var validateCriteria = window.confirm("You selected uppercase letters and special characters. Press ok to confirm and receive your password, or cancel to exit and try again.")
             if (validateCriteria) {
+              // randomize password
               for (var i = 0; i < passwordLength; i++) {
                 var randomPassword = function() {
                     var value = Math.floor(Math.random() * option.seven.length);
@@ -208,8 +222,10 @@ function generatePassword() {
           // if user refuses special characters
           } else {
             console.log("no special characters")
+            // validate criteria choice
             var validateCriteria = window.confirm("You selected uppercase letters. Press ok to confirm and receive your password, or cancel to exit and try again.")
             if (validateCriteria) {
+              // randomize password
               for (var i = 0; i < passwordLength; i++) {
                   var randomPassword = function() {
                       var value = Math.floor(Math.random() * option.eight.length);
@@ -241,8 +257,10 @@ function generatePassword() {
           // if user confirms special characters
           if (confirmSpecials) {
             console.log("special characters")
+            // validate criteria choices
             var validateCriteria = window.confirm("You selected lowercase letters, numbers and special characters. Press ok to confirm and receive your password, or cancel to exit and try again.")
             if (validateCriteria) {
+              // randomize password
               for (var i = 0; i < passwordLength; i++) {
                 var randomPassword = function() {
                     var value = Math.floor(Math.random() * option.nine.length);
@@ -257,8 +275,10 @@ function generatePassword() {
           // if user refuses special characters
           } else {
             console.log("no special characters")
+            // validate criteria choices
             var validateCriteria = window.confirm("You selected lowercase letters and numbers. Press ok to confirm and receive your password, or cancel to exit and try again.")
             if (validateCriteria) {
+              // randomize password
               for (var i = 0; i < passwordLength; i++) {
                 var randomPassword = function() {
                     var value = Math.floor(Math.random() * option.ten.length);
@@ -280,8 +300,10 @@ function generatePassword() {
           // if confirm special characters
           if (confirmSpecials) {
             console.log("special characters")
+            // validate criteria choices
             var validateCriteria = window.confirm("You selected lowercase letters and special characters. Press ok to confirm and receive your password, or cancel to exit and try again.")
             if (validateCriteria) {
+              // randomize password
               for (var i = 0; i < passwordLength; i++) {
                 var randomPassword = function() {
                     var value = Math.floor(Math.random() * option.eleven.length);
@@ -296,8 +318,10 @@ function generatePassword() {
           // if user refuses special characters
           } else {
             console.log("no special characters")
+            // validate criteria choices
             var validateCriteria = window.confirm("You selected lowercase letters. Press ok to confirm and receive your password, or cancel to exit and try again.")
             if (validateCriteria) {
+              // randomize password
               for (var i = 0; i < passwordLength; i++) {
                 var randomPassword = function() {
                     var value = Math.floor(Math.random() * option.twelve.length);
@@ -322,8 +346,10 @@ function generatePassword() {
           // if user confirms special characters
           if (confirmSpecials) {
             console.log("special characters")
+            // validate criteria choices
             var validateCriteria = window.confirm("You selected numbers and special characters. Press ok to confirm and receive your password, or cancel to exit and try again.")
             if (validateCriteria) {
+              // randomize password
               for (var i = 0; i < passwordLength; i++) {
                 var randomPassword = function() {
                     var value = Math.floor(Math.random() * option.thirteen.length);
@@ -338,8 +364,10 @@ function generatePassword() {
           // if user refuses special characters
           } else {
             console.log("no special characters")
+            // validate criteria choices
             var validateCriteria = window.confirm("You selected numbers. Press ok to confirm and receive your password, or cancel to exit and try again.")
             if (validateCriteria) {
+              // randomize password
               for (var i = 0; i < passwordLength; i++) {
                 var randomPassword = function() {
                     var value = Math.floor(Math.random() * option.fourteen.length);
@@ -360,8 +388,10 @@ function generatePassword() {
           // if confirm special characters
           if (confirmSpecials) {
             console.log("special characters")
+            // validate criteria choices
             var validateCriteria = window.confirm("You selected special characters. Press ok to confirm and receive your password, or cancel to exit and try again.")
             if (validateCriteria) {
+              // randomize password
               for (var i = 0; i < passwordLength; i++) {
                 var randomPassword = function() {
                     var value = Math.floor(Math.random() * option.fifteen.length);
