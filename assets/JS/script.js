@@ -34,6 +34,9 @@ var option = {
   ten: [...lowercase.characters, ...number.characters],
   eleven: [...lowercase.characters, ...special.characters],
   twelve: [...lowercase.characters],
+  thirteen: [...number.characters, ...special.characters],
+  fourteen: [...number.characters],
+  fifteen: [...special.characters],
 }
 
 
@@ -183,6 +186,9 @@ function generatePassword() {
 
     // if users refuses uppercase letters
     } else {
+      var confirmLowerCase = window.confirm("Would you like to use lowercase letters in your password?")
+      // if user confirms lowercase letters
+      if (confirmLowerCase) {
       console.log("only lowercase")
       // Ask for numbers
       var confirmNumbers = window.confirm("Would you like numbers in your password?")
@@ -244,6 +250,56 @@ function generatePassword() {
             }
           }
         }
+      // if user refuses lowercase letters
+      } else {
+        var confirmNumbers = window.confirm("Would you like numbers in your password?")
+        // if confirm numbers
+        if (confirmNumbers) {
+          console.log("numbers")
+          // Ask for special characters
+          var confirmSpecials = window.confirm("Would you like your password to contain special characters?")
+          // if user confirms special characters
+          if (confirmSpecials) {
+            console.log("special characters")
+            for (var i = 0; i < passwordLength; i++) {
+              var randomPassword = function() {
+                   var value = Math.floor(Math.random() * option.thirteen.length);
+                option.thirteen[value]
+                finalPassword += option.thirteen[value];
+              } 
+             randomPassword();
+            }
+          // if user refuses special characters
+          } else {
+            console.log("no special characters")
+            for (var i = 0; i < passwordLength; i++) {
+              var randomPassword = function() {
+                  var value = Math.floor(Math.random() * option.fourteen.length);
+                option.fourteen[value]
+                finalPassword += option.fourteen[value];
+              } 
+            randomPassword();
+            }
+          }
+        } else {
+          // if user refuses numbers
+          console.log("no numbers")
+          // Ask for special characters
+          var confirmSpecials = window.confirm("Would you like your password to contain special characters?")
+          // if confirm special characters
+          if (confirmSpecials) {
+            console.log("special characters")
+            for (var i = 0; i < passwordLength; i++) {
+              var randomPassword = function() {
+                   var value = Math.floor(Math.random() * option.fifteen.length);
+                option.fifteen[value]
+                finalPassword += option.fifteen[value];
+              } 
+             randomPassword();
+            }
+          }
+        }
+      }
     }
 
   // if passwordLength is not between 8 and 128
